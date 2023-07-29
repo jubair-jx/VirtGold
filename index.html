@@ -4,13 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VirtGold</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- =========Main CSS========= -->
     <link rel="stylesheet" href="style.css">
-
     <!-- TailwindCSS Script -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body style="font-family: 'Inter', sans-serif;">
+    <!-- ================Main Header Section Start =================-->
+  
+    <header>
+        <!-- Top Bar Section -->
+        <article style="font-family: 'Inter', sans-serif;"
+          class="hidden h-[37px] lg:flex justify-center items-center bg-gradient-to-r from-[#FEAF04] via-[#f1960d] to-[#FFD056]"
+        >
+          <p
+            class="text-[12px]  leading-[14px] font-[600] text-center text-[#1B1B1B]"
+          >
+            Now Accepting Credit Card & Other Payment Methods
+          </p>
+        </article>
+        <!-- Navbar Section -->
+        <nav
+          class="h-[63px] pt-[23px] bg-[#27213C] lg:pt-0 lg:border-b flex justify-start items-center border-white border-opacity-[15%]"
+        >
+        <!-- Navbar Container -->
+          <article
+            class="flex justify-between items-center gap-5 w-[calc(100vw-48px)] lg:w-[calc(100vw-200px)] mx-auto relative"
+          >
+            <!-- First Column of the Navbar -->
+            <div class="flex items-center justify-between gap-[40px]">
+              <!-- Navbar Logo -->
+              <img
+                src="images/logo.png"
+                class="px-2 py-2 bg-white rounded-full"
+                alt=""
+              />
+              <!-- Navbar Search Box -->
+              <div
+                class="hidden lg:flex justify-between items-center gap-2 border border-white border-opacity-25 p-[8px_13px] rounded-[4px] w-[470px]"
+              >
+                <input
+                  type="text"
+                  placeholder="Search"
+                  class="bg-transparent text-sm focus:pl-4 max-w-full duration-300 border-0 outline-o focus:outline-0 placeholder:opacity-70"
+                />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass opacity-70"></i>
+                </button>
+              </div>
+            </div>
+            <!-- Second Column of the Navbar for large devices-->
+            <div class="lg:flex items-center gap-1 hidden">
+              <!-- Navbar Currency Dropdown -->
+              <div
+                class="text-[12px] leading-[20px] font-[600] flex items-center"
+              >
+                <label for=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9 rounded-full bg-[#C6D8D329] px-2 py-2 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  </label>
+                <select
+                  class="bg-transparent ml-1 cursor-pointer text-white"
+                  name="USD"
+                  id="currency"
+                >
+                  <option value="USD" selected>USD</option>
+                  <option value="BDT">BDT</option>
+                </select>
+              </div>
+              <!-- Login Button -->
+              <button
+                class="text-[13px] text-white leading-[22px] font-[700] hover:text-[#FCAB00] duration-200 mx-[24px]"
+              >
+                Login
+              </button>
+              <!-- Sign Up Button -->
+              <div class="flex items-center gap-[7px]">
+                <button
+                  class="p-[7px_9px_7px_9px] lg:p-[11px_18px_11px_17px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200"
+                >
+                  <span class="whitespace-pre">Sign Up</span>
+                </button>
+                <button
+                  class="p-[11px_13px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-orange-200 hover:text-[#FCAB00] duration-200"
+                >
+                  <img src="images/buy.png" alt="">
+                </button>
+              </div>
+            </div>
+            <!-- This is only for mobile devices -->
+            <div class="lg:hidden">
+              <!-- Menu Bar Icon for small devices -->
+              <button id="openMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  
+                  
+              </button>
+              <!-- Navbar Menu List for mobile devices -->
+              <div
+                id="menuList"
+                class="bg-[#241f36] z-30 text-white absolute top-full right-0 duration-300 border border-white border-opacity-25 rounded-[10px] px-4 py-6 w-[300px]"
+              >
+                <div class="flex flex-col gap-5">
+                  <!-- Search Box for mobile devices -->
+                  <div
+                    class="flex justify-between items-center gap-2 border border-white border-opacity-25 p-[8px_13px] rounded-[4px]"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      class="bg-transparent text-sm focus:pl-4 w-full duration-300 border-0 outline-o focus:outline-0 placeholder:opacity-70"
+                    />
+                    <button>
+                      <i class="fa-solid fa-magnifying-glass opacity-70"></i>
+                    </button>
+                  </div>
+                  <!-- Currency Dropdown -->
+                  <div
+                    class="text-[12px] leading-[20px] font-[600] flex items-center gap-2 mx-auto"
+                  >
+                    <label for=""><i class="fa-solid fa-sack-dollar"></i></label>
+                    <select
+                      class="bg-transparent cursor-pointer"
+                      name="USD"
+                      id="currency"
+                    >
+                      <option value="USD" selected>USD</option>
+                      <option value="BDT">BDT</option>
+                    </select>
+                  </div>
+                  <!-- Login Button -->
+                  <button
+                    class="p-[7px_9px_7px_9px] lg:p-[11px_18px_11px_17px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200"
+                  >
+                    <span class="whitespace-pre">Login</span>
+                  </button>
+                  <!-- Sign Up Button -->
+                  <button
+                    class="p-[7px_9px_7px_9px] lg:p-[11px_18px_11px_17px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200"
+                  >
+                    <span class="whitespace-pre">Sign Up</span>
+                  </button>
+                  <!-- Cart Button -->
+                  <button
+                    class="p-[11px_13px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200"
+                  >
+                    <i class="fa-solid fa-cart-plus h-[15px] w-[18px]">
+                        
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </nav>
+        <!-- Banner Section -->
+     
+      </header>
+
+    <!-- ================Main Header Section End =================-->
+    <main class="main_banner bg-gradient-to-r relative
+     from-[#2d1a2c] via-[#302b3f] to-[#27213C] h-[1200px] w-full">
+     <div class="flex justify-between">
+        <img src="images/banner-left.png" class="w-52 h-[390px]" alt="">
+        <img src="images/banner-right.png" alt="">
+
+     </div>
+
+    <!-- ================ Banner Section Start =================-->
+    <section class="absolute top-16 md:px-24 lg:px-24 xl:px-24  ">
+      
+    <nav class="flex" aria-label="Breadcrumb">
+    <ol style="font-family: 'Inter', sans-serif;" class="inline-flex items-center space-x-1 md:space-x-3">
+      <li class="inline-flex items-center">
+        <a  class="inline-flex items-center text-xs  text-gray-100 hover:text-blue-600 dark:text-gray-100 dark:hover:text-white">
+       
+          Home
+        </a>
+      </li>
+      <li>
+        <div class="flex items-center">
+          <svg class="w-2 h-2 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+          </svg>
+          <a  class="ml-1 text-xs  text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">Diablo 4 gold</a>
+        </div>
+      </li>
     
+    </ol>
+  </nav>
+  
+    <div>
+    <h1 style="font-family: 'Inter', sans-serif;" class="text-[44px] font-bold text-white mt-5 ">Diablo IV gold</h1>
+        </div>
+   <div class="mt-8">
+    <button style="padding: 11px 18.28px 11px 17px;" class="bg-[#FCAB00]  font-bold rounded-full text-sm hover:border-[#FCAB00] hover:bg-[#c8c8c85e] hover:text-white duration-500">Diablo 4 Gold</button>
+
+    <button style="padding: 11px 18.28px 11px 17px;" class="bg-[#c8c8c85e] md:ml-2  font-bold rounded-full text-sm hover:border-[#FCAB00] hover:bg-[#FCAB00] text-white  hover:text-black duration-500">Diablo 4 Gold</button>
+
+    <button style="padding: 11px 18.28px 11px 17px;" class="bg-[#c8c8c85e] md:ml-2 text-white font-bold rounded-full text-sm hover:border-[#FCAB00] hover:bg-[#FCAB00]  hover:text-black duration-500">Diablo 4 Gold</button>
+   </div>
+    </section>
+    <!-- ================ Banner Section End =================-->
+</main>
+  <script>
+        const openMenuButton = document.getElementById("openMenu");
+        const menuList = document.getElementById("menuList");
+        openMenuButton.addEventListener("click", () => {
+          menuList.classList.toggle("hidden");
+        });
+      </script>
+  
+  
+  
+  
+  
+  
+  
+  
 </body>
 </html>
