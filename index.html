@@ -58,7 +58,7 @@
                   class="bg-transparent text-sm focus:pl-4 max-w-full duration-300 border-0 outline-o focus:outline-0 placeholder:opacity-70"
                 />
                 <button>
-                  <i class="fa-solid fa-magnifying-glass opacity-70"></i>
+                  <i class="fa-solid fa-magnifying-glass opacity-70 text-white"></i>
                 </button>
               </div>
             </div>
@@ -68,18 +68,48 @@
               <div
                 class="text-[12px] leading-[20px] font-[600] flex items-center"
               >
-                <label for=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9 rounded-full bg-[#C6D8D329] px-2 py-2 text-white">
+              <div class="relative z-10">
+              <div class="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9 rounded-full bg-[#C6D8D329]  py-2 text-white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  </label>
-                <select
-                  class="bg-transparent ml-1 cursor-pointer text-white"
-                  name="USD"
-                  id="currency"
+                <button
+            
+                  class="px-4 dropdownBtn py-2 flex  text-[#C6D8D3] rounded-md focus:outline-none"
                 >
-                  <option value="USD" selected>USD</option>
-                  <option value="BDT">BDT</option>
-                </select>
+                
+                  <p>USD</p> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 ml-1  h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                  
+                </button>
+              </div>
+                <div
+                 
+                  class="dropdownMenu absolute right-0 mt-2 w-40 bg-gray-600 rounded-md shadow-lg hidden"
+                >
+                  <!-- Dropdown content -->
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-200 hover:bg-gray-200"
+                  >
+                    BDT
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-200 hover:bg-gray-200"
+                  >
+                    USD
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-200 hover:bg-gray-200"
+                  >
+                   BTC
+                  </a>
+                </div>
+              </div>
+              
               </div>
               <!-- Login Button -->
               <button
@@ -131,19 +161,47 @@
                     </button>
                   </div>
                   <!-- Currency Dropdown -->
-                  <div
-                    class="text-[12px] leading-[20px] font-[600] flex items-center gap-2 mx-auto"
+                   <div class="relative z-10">
+              <div class="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-9 h-9 rounded-full bg-[#C6D8D329]  py-2 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                <button
+               
+                  class="px-4 dropdownBtn-mobile py-2 flex  text-[#C6D8D3] rounded-md focus:outline-none"
+                >
+                
+                  <p>USD</p> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 ml-1  h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                  
+                </button>
+              </div>
+                <div
+             
+                  class="absolute dropdownMenu-mobile right-0 mt-2 w-40 bg-gray-600 rounded-md shadow-lg hidden"
+                >
+                  <!-- Dropdown content -->
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-00 hover:bg-gray-200"
                   >
-                    <label for=""><i class="fa-solid fa-sack-dollar"></i></label>
-                    <select
-                      class="bg-transparent cursor-pointer"
-                      name="USD"
-                      id="currency"
-                    >
-                      <option value="USD" selected>USD</option>
-                      <option value="BDT">BDT</option>
-                    </select>
-                  </div>
+                    BDT
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-00 hover:bg-gray-200"
+                  >
+                    USD
+                  </a>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-00 hover:bg-gray-200"
+                  >
+                   BTC
+                  </a>
+                </div>
+              </div>
                   <!-- Login Button -->
                   <button
                     class="p-[7px_9px_7px_9px] lg:p-[11px_18px_11px_17px] text-[13px] text-[#27213C] leading-[22px] font-[700] border border-[#FCAB00] bg-[#FCAB00] text-center rounded-[300px] hover:bg-transparent hover:text-[#FCAB00] duration-200"
@@ -400,11 +458,45 @@
     
 </main>
   <script>
+
+    
         const openMenuButton = document.getElementById("openMenu");
         const menuList = document.getElementById("menuList");
         openMenuButton.addEventListener("click", () => {
           menuList.classList.toggle("hidden");
         });
+
+     
+  // Select the dropdown button and menu for both mobile and PC views
+  const dropdownBtnMobile = document.querySelector('.dropdownBtn-mobile');
+  const dropdownMenuMobile = document.querySelector('.dropdownMenu-mobile');
+  const dropdownBtnPC = document.querySelector('.dropdownBtn');
+  const dropdownMenuPC = document.querySelector('.dropdownMenu');
+
+  function toggleDropdown(dropdownMenu, dropdownBtn) {
+    dropdownMenu.classList.toggle('hidden');
+    // Close the dropdown when clicking outside of it
+    window.addEventListener('click', (event) => {
+      if (!dropdownMenu.contains(event.target) && !dropdownBtn.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+  }
+
+  // Use click event for desktop and touchstart event for mobile
+  dropdownBtnPC.addEventListener('click', () => {
+    toggleDropdown(dropdownMenuPC, dropdownBtnPC);
+  });
+  dropdownBtnMobile.addEventListener('click', () => {
+    toggleDropdown(dropdownMenuMobile, dropdownBtnMobile);
+  });
+  dropdownBtnMobile.addEventListener('touchstart', () => {
+    toggleDropdown(dropdownMenuMobile, dropdownBtnMobile);
+  });
+
+
+
+        
       </script>
   
   
