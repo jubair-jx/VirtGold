@@ -230,11 +230,11 @@
      
       </header>
     <!-- ================Main Header Section End =================-->
-    <main class="main_banner bg-gradient-to-r relative
-     from-[#2d1a2c] via-[#302b3f] to-[#27213C] md:h-[4500px] h-[8000px] md:w-full">
+    <main class=" bg-gradient-to-r relative
+     from-[#2d1a2c] via-[#302b3f] to-[#27213C] md:h-[6500px] lg:h-[4500px] h-[7400px] md:w-full">
      <div class="flex justify-between">
-        <img src="images/banner-left.png" class="w-52 h-[390px]" alt="">
-        <img src="images/banner-right.png" alt="">
+        <img src="images/banner-left.png" class="w-52 h-[390px] lg:block md:block sm:hidden hidden" alt="">
+        <img src="images/banner-right.png" class="lg:block md:block sm:hidden hidden" alt="">
 
      </div>
 
@@ -256,7 +256,7 @@
               <svg class="w-2 h-2 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
               </svg>
-              <a  class="ml-1 text-xs  text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">Diablo 4 gold</a>
+              <a  class="ml-1 text-xs  text-gray-300 hover:text-blue-600 md:ml-2 ">Diablo 4 gold</a>
             </div>
           </li>
         
@@ -290,25 +290,25 @@
         
             <!--======= main group button areaa ==========-->
         <div class=" grid  lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-2 sm:px-3 px-3 md:px-2 lg:px-20  rounded-md shadow-sm   ">
-            <a  class="px-2 py-2 text-[12px] font-medium text-blue-700  border border-gray-200  hover:bg-[#27284A] duration-500 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 bg-[#51c18b] dark:border-gray-600 dark:text-black dark:hover:text-white  dark:focus:ring-blue-500 dark:focus:text-white">
+            <a  class="px-2 py-2 text-[12px] font-medium border-r-[1px] border-[#414371]   hover:bg-[#27284A] duration-500 focus:z-10 focus:ring-2   bg-[#51c18b]  dark:text-black dark:hover:text-white  ">
                 Season 1 - Softcore
             </a>
-            <a  class="px-2 py-2 text-[12px] font-medium text-blue-700  border border-gray-200 bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700  dark:border-gray-600 dark:text-white dark:hover:text-black  dark:focus:ring-blue-500 dark:focus:text-white">
+            <a  class="px-2 py-2 text-[12px] font-medium border-r-[1px] border-[#414371]  bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2  dark:text-white dark:hover:text-black ">
                 Season 1 - Softcore
             </a>
-            <a  class="px-2 py-2 text-[12px] font-medium text-blue-700  border border-gray-200 bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700  dark:border-gray-600 dark:text-white dark:hover:text-black  dark:focus:ring-blue-500 dark:focus:text-white">
+            <a  class="px-2 py-2 text-[12px] font-medium  border-r-[1px] border-[#414371]  bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2    dark:text-white dark:hover:text-black  ">
                 Season 1 - Softcore
             </a>
-            <a  class="px-2 py-2 text-[12px] font-medium text-blue-700  border border-gray-200 bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700  dark:border-gray-600 dark:text-white dark:hover:text-black  dark:focus:ring-blue-500 dark:focus:text-white">
+            <a  class="px-2 py-2 text-[12px] font-medium    bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2    dark:text-white dark:hover:text-black  ">
                 Season 1 - Softcore
             </a>
       </div>
     
       <!-- plus minase and number part -->
       <div class="h-10 md:w-9/12 mt-6 md:ml-[60px] lg:ml-[90px] sm:mx-4 mx-4  rounded-full border-[#3C4A64] border-2 flex justify-between px-10 items-center text-white">
-    <button class="text-xl">-</button>
-     <p>10</p>
-     <button class="text-xl">+</button>
+    <button id="decrementBtn" class="text-xl">-</button>
+     <p id="fieldText">0</p>
+     <button id="incrementBtn" class="text-xl">+</button>
       </div>
 
     <!--==== Count Number M==== -->
@@ -354,7 +354,7 @@
      <!-- ========Service menu part area end==========   -->
     <!-- Buy now and card icon -->
     <div class="flex justify-end items-center md:px-20 px-3 gap-5 mt-5">
-            <h2 class="text-white"><span class="text-md font-semibold">$</span> <span class="text-3xl font-bold">1.79</span></h2>
+            <h2 class="text-white"><span class="text-md font-semibold">$</span> <span id="price-amount" class="text-3xl font-bold">00</span></h2>
             <button class="flex justify-center items-center  " ><span class="py-3 rounded-l-3xl px-4 bg-[#FCAB00] font-bold">BUY</span><img class="bg-[#222E44] h-12  py-3 rounded-r-3xl px-4 " src="images/icon.png" alt=""></button>
     </div>
     </div>
@@ -380,11 +380,7 @@
                     <p class=""><span class="font-bold">Release Date:</span> June 6, 2023</p>
                     <p class="">Diablo IV, the latest official work in the Diablo game series, which is independently developed and
                         published by
-                        Blizzard Entertainment. We live in a dark and foreboding world filled with demons, monsters, and other
-                        sinister
-                        creatures. Players will once again take on the role of a hero, battling their way through hordes of enemies
-                        and
-                        collecting powerful loot along the way.  </p>
+                        Blizzard Entertainment.We live in a dark and foreboding world filled with demons, monsters, and other sinister creatures. Players will once again take on the role of a hero, battling their way through hordes of enemies and collecting powerful loot along the way. Be vigilant and control characters to complete corresponding tasks and kill more enemies when Lilith is wreaking havoc. </p>
                 </div>
             </div>
             <!-- Dicount Cards -->
@@ -431,17 +427,20 @@
                         <div class="w-full flex  p-3">
                             <div class="w-[50%] ">
                                 <div>
-                                    <h2 class="md:text-[15.907px] text-[12px] font-bold leading-[25.451px] text-white">Atlantis Armour Pack</h2> 
+                                    <h2 class="md:text-[15.907px] text-[12px] font-bold leading-[25.451px] text-white">Siren Flame Dash Effect</h2> 
                                     <p class="md:text-[14.683px] text-[12px] font-normal leading-[19px] text-white">Ends in 10 hours</p>
                                 </div>
                                 <div class="mt-4">
                                     <h2 class="text-[#FFFFFFB2] text-[12px] md:text-[15px] font-normal leading-[19px]">
-                                        Atlantis Armour Pack discounted to 630 Points (TODAY ONLY)
+                                        Siren Flame Dash
+Effect discounted to
+80 Points (TODAY
+ONLY)
                                     </h2>
                                 </div>
                             </div>
                             <div class="w-[30%] ">
-                                <img class="relative" src="./images/AtlantisArmourSet.png.png" alt="">
+                                <img class="relative" src="images/SirenFlamedashEffect 2.png" alt="">
                                 <img class="absolute top-[80px] right-[20px] w-[60px]" src="./images/Link.png" alt="">
                             </div>
                         </div>
@@ -460,17 +459,20 @@
                         <div class="w-full flex  p-3">
                             <div class="w-[50%] ">
                                 <div>
-                                    <h2 class="md:text-[15.907px] text-[12px] font-bold leading-[25.451px] text-white">Atlantis Armour Pack</h2> 
+                                    <h2 class="md:text-[15.907px] text-[12px] font-bold leading-[25.451px] text-white">Siren Pegasus Pet</h2> 
                                     <p class="md:text-[14.683px] text-[12px] font-normal leading-[19px] text-white">Ends in 10 hours</p>
                                 </div>
                                 <div class="mt-4">
                                     <h2 class="text-[#FFFFFFB2] text-[12px] md:text-[15px] font-normal leading-[19px]">
-                                        Atlantis Armour Pack discounted to 630 Points (TODAY ONLY)
+                                        Siren Pegasus Pet
+                                        discounted to 120
+                                        Points (TODAY
+                                        ONLY)
                                     </h2>
                                 </div>
                             </div>
                             <div class="w-[30%] ">
-                                <img class="relative" src="./images/AtlantisArmourSet.png.png" alt="">
+                                <img class="relative" src="./images/SirenPegasusPet3.png" alt="">
                                 <img class="absolute top-[80px] right-[20px] w-[60px]" src="./images/Link.png" alt="">
                             </div>
                         </div>
@@ -579,8 +581,8 @@
         </div>
         
         <!-- season sec -->
-        <div class="lg:w-[60%] lg:pt-[47px] lg:pb-[79px] lg:pl-[30px] lg:pr-[30px] lg:rounded-[20px] lg:bg-[#FFFFFF1A]">
-            <div class="lg:w-full">
+        <div class="lg:w-[60%] lg:pt-[60px] lg:pb-[79px] lg:pl-[30px] lg:pr-[30px] lg:rounded-[20px] lg:bg-[#FFFFFF1A]">
+            <div class="lg:w-full pt-4">
                 <h1 class="text-[20px] font-bold leading-[48px] text-white mt-[20px] lg:mt-0 mb-[10px]">Diablo 4 Season 1</h1>
                 <p class="text-white text-[16px] font-normal leading-[22px]">The highly anticipated Diablo 4 Season 1 will be released on July 20, and fans of the game are eagerly diving into the
                 latest updates and features. As the first season of the game, it marks a significant milestone for the franchise and
@@ -591,7 +593,7 @@
                 gaming experience. So gear up, grab your weapons, and get ready to embark on an epic journey through the dark and
                 dangerous world of Diablo IV.</p>
             </div>
-            <div class="lg:w-full">
+            <div class="lg:w-full pt-4">
                 <h1 class="text-[21px] font-bold leading-[48px] text-white mt-[20px] mb-[10px]">What is Diablo 4 Gold?</h1>
                 <p class="text-white text-[16px] font-normal leading-[22px]">As the name suggests, Diablo 4 Gold is the currency that Diablo 4 players can use in the game, which will occupy an
                 extremely important position, and it is an essential resource for every player who wants to progress. You can use D4
@@ -643,8 +645,8 @@
                 </div>
             </div>
             <div class="lg:w-full">
-                <h1 class="text-[21px] font-bold leading-[48px] text-white mt-[20px] mb-[10px]">Steps To Buy Diablo IV Gold At IGGM.com</h1>
-                <p class="text-white text-[16px] font-normal leading-[22px] flex flex-col gap-[18px]">
+                <h1 class="text-[21px] font-bold leading-[48px] text-white mt-[40px]">Steps To Buy Diablo IV Gold At IGGM.com</h1>
+                <p class="text-white text-[16px] font-normal leading-[22px]  flex flex-col gap-[18px]">
                     <span>(Applicable to registered users and visitors)</span>
                     <span>1: Select one of “Softcore/Hardcore” servers;</span>
                     <span>2: Choose how much to buy Diablo 4 Gold, click “Buy”or click on the small shopping cart icon next to it, and “CHECKOUT”</span>
@@ -676,9 +678,9 @@
                         <div class="w-[70%] lg:w-[60%] xl:w-[70%]">
                             <h1 class="lg:text-[20px] text-[16px] ml-5 text-black lg:text-[#E5E8F1] font-bold">Diablo 4: The Fastest Way To Farm Renown In Season 1</h1>
                             <p class="text-[11px] pl-5 font-normal leading-5  pt-2 lg:m-0 text-black lg:text-white">One of the most tedious things in <span class="text-[#FD3F5B]">Diablo 4</span> obviously is <span class="text-[#FD3F5B]">farming Renown</span>. It’s a huge pain in the butt, but it’s kind of a
-                            necessary evil. Because you want the Skill Points and the Paragon Points. You have to do it. But a lot of people go at
-                            Renown farming the completely wrong way and it actually makes it a lot harder and more frustrating than it has to be.
-                            Don’t worry. I’m here to help you out.…</p>
+                            necessary evil. <span class="lg:block md:block sm:hidden hidden">Because you want the Skill Points and the Paragon Points. You have to do it. But a lot of people go at
+                                Renown farming the
+                                Don’t worry. I’m here to help you out</span>.…</p>
                         </div>
                     </div>
                     <div
@@ -686,7 +688,7 @@
                         <div class="lg:w-[30%] w-full"><img class="w-full rounded-lg lg:w-none" src="./images/news 2.png" alt=""></div>
                         <div class="w-[70%] lg:w-[70%] xl:w-[70%]">
                             <h1 class="lg:text-[19px] ml-5 text-[16px] text-black lg:text-[#E5E8F1] font-bold">Diablo 4: Gumby785 Found An Exploit That Helps Players Skip Season 1 Battle Pa…</h1>
-                            <p class="text-[12px] font-normal  pt-2 leading-5 pl-4 lg:m-0 text-black lg:text-white">Everyone fan of Diablo 4 knows very clearly, recently, <span class="text-yellow-400">Season 1 has just been released</span>, which has also aroused the enthusiasm of many players. Diablo 4 players just happened to discover a simple trick that <span class="text-[#564FFF]">can skip hours of work earning favor for the game's Season 1 Battle Pass </span> Season Journey is also an important part of <span class="text-green-300">Diablo 4 Season of the Malignant</span> . The progression of the story in this season is divided into <span class="text-[#564FFF]">several chapters</span> which require the player to further complete these….…</p>
+                            <p class="text-[12px] font-normal  pt-2 leading-5 pl-4 lg:m-0 text-black lg:text-white">Everyone fan of Diablo 4 knows very clearly, recently, <span class="text-yellow-400">Season 1 has just been released</span>, which has also aroused the enthusiasm of many players.<span class="lg:block md:block sm:hidden hidden"> Diablo 4 players just happened to discover a simple trick that <span class="text-[#564FFF] ">can skip hours of work earning favor for the game's Season 1 Battle Pass </span> Season Journey is also an important part of <span class="text-green-300 ">Diablo 4 Season of the Malignant</span> . The progression of the story in this season is divided into <span class="text-[#564FFF]">several chapters</span> which require the player to further complete these</span>….…</p>
                         </div>
                     </div>
                 </div>
@@ -708,7 +710,7 @@
             willing to work with Overgear?</h2>
             <p class="text-white md:text-[15px] text-[13px] font-normal mt-6">Join our team of over 5,000 of professional gamers and suppliers who get paid
                 helping other gamers worldwide.</p>
-                <button class="mt-6 bg-[#FCAB00] border-[#FCAB00] px-16 md:px-8 py-3 border-[2px] hover:border-[#FCAB00] hover:bg-[#c8c8c85e] hover:text-white duration-500  text-[12px] md:text-[13px] font-bold rounded-full">Start earning with Overgear</button>
+                <button class="mt-6 bg-[#FCAB00] border-[#FCAB00] px-20 md:px-8 py-3 border-[2px] hover:border-[#FCAB00] hover:bg-[#c8c8c85e] hover:text-white duration-500  text-[12px] md:text-[13px] font-bold rounded-full">Start earning with Overgear</button>
     </div>
 </section>
   <!--======== Professional game  section End========= -->
@@ -804,42 +806,7 @@
 
 
 
-
-  <script>
-            const openMenuButton = document.getElementById("openMenu");
-        const menuList = document.getElementById("menuList");
-        openMenuButton.addEventListener("click", () => {
-          menuList.classList.toggle("hidden");
-        });
-
-    
-  // Select the dropdown button and menu for both mobile and PC views
-  const dropdownBtnMobile = document.querySelector('.dropdownBtn-mobile');
-  const dropdownMenuMobile = document.querySelector('.dropdownMenu-mobile');
-  const dropdownBtnPC = document.querySelector('.dropdownBtn');
-  const dropdownMenuPC = document.querySelector('.dropdownMenu');
-
-  function toggleDropdown(dropdownMenu, dropdownBtn) {
-    dropdownMenu.classList.toggle('hidden');
-    // Close the dropdown when clicking outside of it
-    window.addEventListener('click', (event) => {
-      if (!dropdownMenu.contains(event.target) && !dropdownBtn.contains(event.target)) {
-        dropdownMenu.classList.add('hidden');
-      }
-    });
-  }
-
-  // Use click event for desktop and touchstart event for mobile
-  dropdownBtnPC.addEventListener('click', () => {
-    toggleDropdown(dropdownMenuPC, dropdownBtnPC);
-  });
-  dropdownBtnMobile.addEventListener('click', () => {
-    toggleDropdown(dropdownMenuMobile, dropdownBtnMobile);
-  });
-  dropdownBtnMobile.addEventListener('touchstart', () => {
-    toggleDropdown(dropdownMenuMobile, dropdownBtnMobile);
-  });
-
-      </script>
+<!-- Main js file -->
+  <script src="app.js"></script>
 </body>
 </html>
