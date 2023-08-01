@@ -1,43 +1,3 @@
-//=============== Menu Js Code==========
-
-const openMenuButton = document.getElementById("openMenu");
-const menuList = document.getElementById("menuList");
-openMenuButton.addEventListener("click", () => {
-  menuList.classList.toggle("hidden");
-});
-//=============== Menu Js Code==========
-
-// Select the dropdown button and menu for both mobile and PC views
-const dropdownBtnMobile = document.querySelector(".dropdownBtn-mobile");
-const dropdownMenuMobile = document.querySelector(".dropdownMenu-mobile");
-const dropdownBtnPC = document.querySelector(".dropdownBtn");
-const dropdownMenuPC = document.querySelector(".dropdownMenu");
-
-function toggleDropdown(dropdownMenu, dropdownBtn) {
-  dropdownMenu.classList.toggle("hidden");
-  // Close the dropdown when clicking outside of it
-  window.addEventListener("click", (event) => {
-    if (
-      !dropdownMenu.contains(event.target) &&
-      !dropdownBtn.contains(event.target)
-    ) {
-      dropdownMenu.classList.add("hidden");
-    }
-  });
-}
-
-// Use click event for desktop and touchstart event for mobile
-dropdownBtnPC.addEventListener("click", () => {
-  toggleDropdown(dropdownMenuPC, dropdownBtnPC);
-});
-dropdownBtnMobile.addEventListener("click", () => {
-  toggleDropdown(dropdownMenuMobile, dropdownBtnMobile);
-});
-dropdownBtnMobile.addEventListener("touchstart", () => {
-  toggleDropdown(dropdownMenuMobile, dropdownBtnMobile);
-});
-// Select the dropdown button and menu for both mobile and PC views
-
 //Increment and decrement fields
 //initialize value
 let count = 0;
@@ -126,7 +86,8 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     buttons.forEach((btn) => {
       btn.classList.remove("bg-[#51c18b]"); // Remove the active background color
-      btn.classList.remove("text-black"); // Remove the active text color
+      btn.classList.remove("text-black");
+      btn.classList.add("bg-[#27284A]"); // Remove the active text color
     });
 
     button.classList.add("bg-[#51c18b]"); // Add the active background color
