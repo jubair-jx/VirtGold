@@ -101,3 +101,8 @@
     margin-bottom: 15px;
   }
 }
+
+.active {
+  background-color: #51c18b;
+  color: #29202b;
+}

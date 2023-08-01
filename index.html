@@ -246,7 +246,7 @@
     <nav class="flex " aria-label="Breadcrumb">
         <ol style="font-family: 'Inter', sans-serif;" class="inline-flex items-center space-x-1 md:space-x-3">
           <li class="inline-flex items-center">
-            <a  class="inline-flex items-center text-xs  text-gray-100 hover:text-blue-600 dark:text-gray-100 dark:hover:text-white">
+            <a  class="inline-flex items-center text-xs  text-gray-100 ">
            
               Home
             </a>
@@ -270,11 +270,38 @@
              <!-- Banner Header -->
              <!-- Banner Buttons -->
        <div class="mt-5">
-        <button  class="bg-[#FCAB00] md:px-5 md:py-3 lg:px-5 lg:py-3 sm:px-3 sm:py-2 px-2 py-3   font-bold rounded-full text-[10px] md:text-sm hover:border-[#FCAB00] hover:bg-[#c8c8c85e] hover:text-white duration-500">Diablo 4 Gold</button>
-    
-        <button  class="bg-[#c8c8c85e] md:ml-2 md:px-5 md:py-3 lg:px-5 lg:py-3 px-2 py-3   sm:px-3 sm:py-2   font-bold rounded-full text-[10px] md:text-sm hover:border-[#FCAB00] hover:bg-[#FCAB00] text-white  hover:text-black duration-500">Diablo 4 Items</button>
-    
-        <button  class="bg-[#c8c8c85e] md:ml-2 md:px-5 md:py-3 lg:px-5 lg:py-3  px-2 py-3  sm:px-3 sm:py-2  text-white font-bold rounded-full text-[10px] md:text-sm hover:border-[#FCAB00] hover:bg-[#FCAB00]  hover:text-black duration-500">Diablo 4 Boosting</button>
+        <div class="flex flex-wrap gap-[10px]">
+          <span
+            id="goldTab"
+            onclick="addAnchor('goldTab','itemTab','boostingTab','Diablo 4 Gold','Diablo 4 Item','Diablo 4 Boosting')"
+          >
+            <a
+              href="#"
+              class="w-[120px] h-[44px] text-center rounded-[300px] border p-[11px] lg:px-[17px] lg:py-[11px] border-[#FCAB00] bg-[#FCAB00] text-[13px] leading-[22px] font-bold text-[#27213C]"
+              >Diablo 4 Gold</a
+            >
+          </span>
+          <span
+            id="itemTab"
+            onclick="addAnchor('itemTab','goldTab','boostingTab','Diablo 4 Item','Diablo 4 Gold',' Diablo 4 Boosting')"
+          >
+            <a
+              href="#"
+              class="w-[120px] h-[44px] text-center rounded-[300px] p-[11px] lg:px-[17px] lg:py-[11px] bg-[#FFFFFF33] text-[#FFFFFF] text-[13px] leading-[22px] font-bold"
+              >Diablo 4  Items</a
+            >
+          </span>
+          <span
+            id="boostingTab"
+            onclick="addAnchor('boostingTab','goldTab','itemTab','Diablo 4 Boosting','Diablo 4 Gold','Diablo 4 Item')"
+          >
+            <a
+              href="#"
+              class="w-[120px] h-[44px] text-center rounded-[300px] p-[11px] lg:px-[17px] lg:py-[11px] bg-[#FFFFFF33] text-[#FFFFFF] text-[13px] leading-[22px] font-bold"
+              >Diablo 4 Boosting</a
+            >
+          </span>
+        </div>
        </div>
    </div>
    <!-- Banner Buttons -->
@@ -290,17 +317,17 @@
         
             <!--======= main group button areaa ==========-->
         <div class=" grid  lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-2 sm:px-3 px-3 md:px-2 lg:px-20  rounded-md shadow-sm   ">
-            <a  class="px-2 py-2 text-[12px] font-medium border-r-[1px] border-[#414371]   hover:bg-[#27284A] duration-500 focus:z-10 focus:ring-2   bg-[#51c18b]  dark:text-black dark:hover:text-white  ">
+            <a id="firstBtn" class=" btns px-2 py-2  cursor-pointer text-[12px] font-medium border-r-[1px] border-[#414371] bg-[#27284A]  duration-500 focus:z-10 focus:ring-2   text-white    ">
                 Season 1 - Softcore
             </a>
-            <a  class="px-2 py-2 text-[12px] font-medium border-r-[1px] border-[#414371]  bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2  dark:text-white dark:hover:text-black ">
-                Season 1 - Softcore
+            <a id="secondBtn"  class=" btns px-2 py-2  cursor-pointer text-[12px] font-medium border-r-[1px] border-[#414371]  bg-[#27284A] duration-500   focus:z-10 focus:ring-2  dark:text-white  ">
+                Season 1 - Hardcore
             </a>
-            <a  class="px-2 py-2 text-[12px] font-medium  border-r-[1px] border-[#414371]  bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2    dark:text-white dark:hover:text-black  ">
-                Season 1 - Softcore
+            <a id="thirdBtn" class=" btns px-2 py-2 cursor-pointer  text-[12px] font-medium  border-r-[1px] border-[#414371]  bg-[#27284A] duration-500 focus:z-10 focus:ring-2    dark:text-white   ">
+                Eternal - Softcore
             </a>
-            <a  class="px-2 py-2 text-[12px] font-medium    bg-[#27284A] duration-500 hover:bg-[#51c18b]  focus:z-10 focus:ring-2    dark:text-white dark:hover:text-black  ">
-                Season 1 - Softcore
+            <a id="fourthBtn" class=" btns px-2 py-2  cursor-pointer text-[12px] font-medium    bg-[#27284A] duration-500 focus:z-10 focus:ring-2    dark:text-white   ">
+                Eternal - Hardcore
             </a>
       </div>
     
@@ -326,7 +353,7 @@
      
     <div class="flex justify-between text-[14px] font-normal px-4 lg:px-24  md:px-10 py-3 text-white">
         <h4>Server</h4>
-        <h4>Season 1 -Softcore</h4>
+        <h4 id="server-id">Season 1 -Softcore</h4>
         
     </div>
     <hr
@@ -335,15 +362,15 @@
     
       <div class="flex justify-between text-[14px] font-normal px-4 lg:px-24  md:px-10  py-3 text-white">
         <h4>Delivery Information</h4>
-        <h4>Face To Face</h4>
+        <h4 id="delivery">Face To Face</h4>
         
     </div>
     <hr
       class=" h-[0.5px] md:w-9/12 w-full mx-auto  border-t-0 bg-[#5b73a0] opacity-100 dark:opacity-50" />
       
     <div class="flex justify-between text-[14px] font-normal px-4 lg:px-24  md:px-10 py-3 text-white">
-        <h4>Amount</h4>
-        <h4>10M</h4>
+        <h4 >Amount</h4>
+        <h4 id="amount">10 M</h4>
         
     </div>
     <hr
@@ -385,7 +412,7 @@
             </div>
             <!-- Dicount Cards -->
             <div class="flex flex-col items-center  gap-[10px] my-[30px]">
-                <div class="relative  md:w-[420px] w-[330px] z-0">
+                <div class="relative lg:w-[460px] md:w-[420px] w-[330px] z-0">
                     <img class="w-full" src="./images/deal-background-large.png" alt="">
                     <div class="absolute top-[18px] left-[80px] z-10">
                         <div
